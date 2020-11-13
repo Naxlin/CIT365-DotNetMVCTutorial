@@ -1,13 +1,11 @@
 @model MvcMovie.Models.Movie
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Movie";
 }
 
-<h1>Edit</h1>
-
-<h4>Movie</h4>
-<hr />
+<h1>@ViewData["Title"]</h1>
+<hr>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">

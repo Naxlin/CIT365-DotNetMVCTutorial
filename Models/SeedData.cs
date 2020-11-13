@@ -23,26 +23,26 @@ namespace MvcMovie.Models
                 context.Movie.AddRange(
                     new Movie
                     {
-                        Title = "When Harry Met Sally",
-                        ReleaseDate = DateTime.Parse("1989-2-12"),
-                        Genre = "Romantic Comedy",
+                        Title = "The Best Two Years",
+                        ReleaseDate = DateTime.Parse("2003-2-1"),
+                        Genre = "Spiritual Comedy",
                         Price = 7.99M,
                         Rating = "PUBG"
                     },
 
                     new Movie
                     {
-                        Title = "Ghostbusters ",
-                        ReleaseDate = DateTime.Parse("1984-3-13"),
-                        Genre = "Comedy",
+                        Title = "The Singles Ward ",
+                        ReleaseDate = DateTime.Parse("2002-3-1"),
+                        Genre = "Romantic Comedy",
                         Price = 8.99M,
                         Rating = "PUBG"
                     },
 
                     new Movie
                     {
-                        Title = "Ghostbusters 2",
-                        ReleaseDate = DateTime.Parse("1986-2-23"),
+                        Title = "Mobsters and Mormons",
+                        ReleaseDate = DateTime.Parse("2005-2-23"),
                         Genre = "Comedy",
                         Price = 9.99M,
                         Rating = "PUBG"
@@ -50,9 +50,9 @@ namespace MvcMovie.Models
 
                     new Movie
                     {
-                        Title = "Rio Bravo",
-                        ReleaseDate = DateTime.Parse("1959-4-15"),
-                        Genre = "Western",
+                        Title = "A Christmas Wish",
+                        ReleaseDate = DateTime.Parse("2007-4-15"),
+                        Genre = "Spiritual",
                         Price = 3.99M,
                         Rating = "PUBG"
                     }
