@@ -12,6 +12,8 @@ namespace MvcMovie.Models
         [Required]
         public string Title { get; set; }
 
+        public string ImageUrl { get; set; }
+
         [Display(Name = "Release Date")]
         [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }

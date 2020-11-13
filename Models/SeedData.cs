@@ -24,6 +24,7 @@ namespace MvcMovie.Models
                     new Movie
                     {
                         Title = "The Best Two Years",
+                        ImageUrl = "TheBestTwoYears.jpg",
                         ReleaseDate = DateTime.Parse("2003-2-1"),
                         Genre = "Spiritual Comedy",
                         Price = 7.99M,
@@ -33,6 +34,7 @@ namespace MvcMovie.Models
                     new Movie
                     {
                         Title = "The Singles Ward ",
+                        ImageUrl = "TheSinglesWard.jpg",
                         ReleaseDate = DateTime.Parse("2002-3-1"),
                         Genre = "Romantic Comedy",
                         Price = 8.99M,
@@ -42,6 +44,7 @@ namespace MvcMovie.Models
                     new Movie
                     {
                         Title = "Mobsters and Mormons",
+                        ImageUrl = "MobstersAndMormons.jpg",
                         ReleaseDate = DateTime.Parse("2005-2-23"),
                         Genre = "Comedy",
                         Price = 9.99M,
@@ -51,6 +54,7 @@ namespace MvcMovie.Models
                     new Movie
                     {
                         Title = "A Christmas Wish",
+                        ImageUrl = "AChristmasWish.jpg",
                         ReleaseDate = DateTime.Parse("2007-4-15"),
                         Genre = "Spiritual",
                         Price = 3.99M,
