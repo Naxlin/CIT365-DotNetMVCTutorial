@@ -66,11 +66,15 @@ namespace MvcMovie.Controllers
             }
 
             var movie = await _context.Movie
+                .Include(m => m.Genre)
                 .FirstOrDefaultAsync(m => m.MovieId == id);
+
             if (movie == null)
             {
                 return NotFound();
             }
+
+            ViewData["Img"] = movie.ImageUrl;
 
             return View(movie);
         }
@@ -87,7 +91,7 @@ namespace MvcMovie.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MovieId,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Create([Bind("MovieId,Title,ImageUrl,ReleaseDate,GenreId,Price,Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -101,12 +105,15 @@ namespace MvcMovie.Controllers
         // GET: Movies/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewData["Genres"] = new SelectList(_context.Set<Genre>(), "GenreId", "GenreName");
+            
             if (id == null)
             {
                 return NotFound();
             }
 
             var movie = await _context.Movie.FindAsync(id);
+
             if (movie == null)
             {
                 return NotFound();
@@ -119,7 +126,7 @@ namespace MvcMovie.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MovieId,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("MovieId,Title,ImageUrl,ReleaseDate,GenreId,Price,Rating")] Movie movie)
         {
             if (id != movie.MovieId)
             {
@@ -158,11 +165,15 @@ namespace MvcMovie.Controllers
             }
 
             var movie = await _context.Movie
+                .Include(m => m.Genre)
                 .FirstOrDefaultAsync(m => m.MovieId == id);
+
             if (movie == null)
             {
                 return NotFound();
             }
+
+            ViewData["Img"] = movie.ImageUrl;
 
             return View(movie);
         }

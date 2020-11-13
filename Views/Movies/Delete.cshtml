@@ -20,7 +20,11 @@
             @Html.DisplayNameFor(model => model.ImageUrl)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImageUrl)
+            @if (ViewData["Img"] == null)
+            {
+                <span> - - - </span>;
+            }
+            @Html.DisplayFor(model => model.ImageUrl)   
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ReleaseDate)
@@ -32,7 +36,7 @@
             @Html.DisplayNameFor(model => model.Genre)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Genre)
+            @Html.DisplayFor(model => model.Genre.GenreName)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Price)
