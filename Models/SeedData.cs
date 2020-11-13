@@ -26,7 +26,7 @@ namespace MvcMovie.Models
                         Title = "The Best Two Years",
                         ImageUrl = "TheBestTwoYears.jpg",
                         ReleaseDate = DateTime.Parse("2003-2-1"),
-                        Genre = "Spiritual Comedy",
+                        GenreId = 1,
                         Price = 7.99M,
                         Rating = "PUBG"
                     },
@@ -36,7 +36,7 @@ namespace MvcMovie.Models
                         Title = "The Singles Ward ",
                         ImageUrl = "TheSinglesWard.jpg",
                         ReleaseDate = DateTime.Parse("2002-3-1"),
-                        Genre = "Romantic Comedy",
+                        GenreId = 2,
                         Price = 8.99M,
                         Rating = "PUBG"
                     },
@@ -46,7 +46,7 @@ namespace MvcMovie.Models
                         Title = "Mobsters and Mormons",
                         ImageUrl = "MobstersAndMormons.jpg",
                         ReleaseDate = DateTime.Parse("2005-2-23"),
-                        Genre = "Comedy",
+                        GenreId = 3,
                         Price = 9.99M,
                         Rating = "PUBG"
                     },
@@ -56,7 +56,7 @@ namespace MvcMovie.Models
                         Title = "A Christmas Wish",
                         ImageUrl = "AChristmasWish.jpg",
                         ReleaseDate = DateTime.Parse("2007-4-15"),
-                        Genre = "Spiritual",
+                        GenreId = 4,
                         Price = 3.99M,
                         Rating = "PUBG"
                     }

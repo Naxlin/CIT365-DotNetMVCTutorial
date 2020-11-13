@@ -23,14 +23,15 @@ namespace MvcMovie.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z]*$")]
-        [Required]
-        [StringLength(30)]
-        public string Genre { get; set; }
+        [Required, Display(Name = "Genre")]
+        public int GenreId { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
         [StringLength(5)]
         [Required]
         public string Rating { get; set; }
+
+        // Navigation Properties:
+        public Genre Genre { get; set; }
     }
 }
